@@ -37,7 +37,8 @@ var removeTask = function(id) {
 };
 
 var changeState = function(id, state) {
-    var ID = false, STATE;
+    var ID = false;
+    var STATE;
     for (var i = 0; i < tasks.length; i++) {
         if (tasks[i].id === id) {
             ID = id;
@@ -69,24 +70,24 @@ var changeState = function(id, state) {
 var warning = console.log;
 
 var render = function() {
-    console.log('진행');
+    console.log(STATE_P);
 
     var task;
 
     for (var i = 0; i < tasks.length; i++) {
         task = tasks[i];
 
-        if (task.state === '진행') {
+        if (task.state === STATE_P) {
             console.log(task.id + '. ' + task.title + '(' + task.state + ')' );
         }
     }
 
-    console.log('완료');
+    console.log(STATE_C);
 
     for (var i = 0; i < tasks.length; i++) {
         task = tasks[i];
 
-        if (task.state === '완료') {
+        if (task.state === STATE_C) {
             console.log(task.id + '. ' + task.title + '(' + task.state + ')' );
         }
     }
