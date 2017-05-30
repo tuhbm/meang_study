@@ -95,6 +95,7 @@ var render = function() {
     console.log('추가     : addTask(할일 내용)');
     console.log('삭제     : removeTask(아이디)');
     console.log('상태 변경 : changeState(아이디, 상태 - 완료 또는 진행)');
-}
+};
 
 render();
+
